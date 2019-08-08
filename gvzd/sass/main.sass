@@ -1,0 +1,518 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+*
+	box-sizing: border-box
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+html
+	font-size: 16px
+	margin-right: 0px!important
+body
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Circe', sans-serif
+	overflow-x: hidden
+	color: $text
+a
+	text-underline-position: under
+// Custom Sass / Remove before use
+
+.container
+	max-width: 1160px
+	padding:
+		right: $gutter
+		left: $gutter
+	margin:
+		left: auto
+		right: auto
+	position: relative
+h1, .h1, h2, .h2
+	font-weight: 900
+	&::before
+		content: ""
+		display: inline-flex
+		width: 66px
+		height: 34px
+		background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='50.539' height='4.135' viewBox='0 0 13.372 1.094'%3e%3cpath d='M.001.565l13.37-.036' fill='none' stroke='%23fdd32f' stroke-width='.794'/%3e%3c/svg%3e") no-repeat 0% 50% 
+h1, .h1
+	font-size: 3.625rem
+h2, .h2
+	font-size: 3.375rem
+h3, .h3
+	font-size: 2.125rem
+h4, .h4
+	font-size: 1.5rem
+.h3, .h4 
+	font-weight: bold
+	color: #000000
+	line-height: 1.2
+p, .p
+	font-size: 1.125rem
+	line-height: 1.444
+img
+	display: block
+	max-width: 100%
+	height: auto
+svg
+	width: 100%
+	height: auto
+	object-fit: contain
+.top
+	display: grid
+	grid-template-columns: 115px 1fr 1fr
+	grid-column-gap: 75px
+	align-items: center
+	padding-top: 1.125rem
+	line-height: 1.2
+	color: #ffffff
+	&--footer
+		grid-template-columns: 80px 2fr 3fr
+		grid-column-gap: 20px
+		padding-top: 1.4rem
+	&--main
+		position: absolute
+		width: 100%
+		padding-right: 40px
+	&__logo
+		&--footer
+			filter: invert(100)
+	&__descriptor
+		margin-top: 32px
+		&--footer
+			color: #000000
+			margin-top: 0px
+			align-self: end
+	&__adress
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		margin-top: 32px
+		padding-right: 29px
+	.map_tag
+		width: 27px
+		height: auto
+		margin:
+			right: 8px
+			bottom: 6px
+		&--fill
+		
+.slide
+	padding: 260px 0 181px 0
+	color: #ffffff
+	display: grid
+	grid-template-areas: "btxt btxt btxt" "info info toadr"
+	&__btxt
+		grid-area: btxt
+		font-size: 5.625rem
+		font-weight: 900
+		line-height: 1.1
+		margin-left: -7px
+	&__info
+		grid-area: info
+		margin-top: 9px
+	&__txt
+		font-size: 2.375rem
+		line-height: 1.05
+	&__working_txt
+		margin-top: 57px
+		font-size: 2.125rem
+		font-weight: 900
+		line-height: 1.175
+		text-transform: uppercase
+	&__working_hours
+		margin-top: 10px
+		font-size: 3.8125rem
+		font-weight: 900
+		color: rgb(253, 211, 47)
+		line-height: 1
+		text-transform: uppercase
+	&__working_days
+		font-size: 1.75rem
+		color: #7d7d7d
+		line-height: 1.2
+		text-transform: lowercase
+	&__toadr
+		grid-area: toadr
+		justify-self: right
+		margin-top: 9px
+		width: 16rem
+		height: 16.9rem
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		align-items: flex-start
+		padding: 23px 0 23px 24px
+		border: 1rem solid #fdd32f
+	&__link
+		font-size: 1.75rem
+		font-weight: 900
+		color: #ffffff
+		text-decoration: underline
+		text-decoration-color: #b9a981
+	.map_tag
+		margin-bottom: 16px
+		width: 35px
+
+.features
+	padding: 195px 0 165px
+	&__bg
+		position: relative
+		margin:
+			top: -95px
+			bottom: -8px
+		background: url('../img/struzhka1.png') no-repeat 15% 0, url('../img/struzhka2.png') no-repeat 86% 108%
+		z-index: 10
+	&__wrap
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		grid-gap: 32px
+		margin-top: 44px
+.feature
+	display: grid
+	grid-template-areas: "icon name name name" "icon descr descr descr"
+	grid-column-gap: 13px 
+	&__icon
+		grid-area: icon
+		width: 79px
+		height: 79px
+		background-color: #fdd32f
+		border-radius: 50%
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		overflow: hidden
+	&__img
+		width: 86%
+	&__name
+		grid-area: name
+		line-height: 1
+		margin-bottom: 8px
+	&__descr
+		grid-area: descr
+		font-size: 1.125rem
+		line-height: 1.4
+
+.mall
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr
+	grid-gap: 2rem
+	margin-top: 2.6125rem
+	&__wrap
+		padding: 4.25rem 0 7.5rem
+	&__ul
+		align-self: start
+		background-color: #ffffff
+		border-radius: 10px
+		padding: 0.75rem 0
+	&__ul_li
+		display: flex
+		align-items: center
+		padding: 0.4375rem 1rem
+		min-height: 3rem
+		line-height: 1.125
+		&:hover:not(.mall__ul_li--active)
+			background-color: #f1d14388
+			cursor: pointer
+		svg
+			max-height: 100%
+			path
+				transition: all 0.2s ease
+				stroke: #000000
+		&--active
+			position: relative
+			background-color: #f1d143
+			font-weight: 900 
+			&::after
+				content: ""
+				display: block
+				position: absolute
+				top: 0
+				height: 0
+				width: 0
+				left: calc(100%)
+				border-width: 25px
+				border-color: transparent 
+				border-style: solid
+				border-left: 10px solid #f1d143 
+			svg
+				path
+					stroke: #ffffff
+	&__ul_icon
+		flex: 0 0 1.4rem
+		height: 1.4rem
+	&__ul_name
+		padding-left: 0.6rem
+	&__info
+		grid-column: 2/4
+		padding: 30px 30px 30px 32px
+		background-color: #ffffff
+		border-radius: 10px
+	&__tabs
+		margin-top: 3.5rem
+	&__tab
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-template-areas: "name name name name" "txt txt txt txt" "contacts contacts contacts link" "gallery gallery gallery gallery"
+		grid-gap: 8px
+		transition: all 0.2s ease 
+		transform: scale(0)
+		height: 0
+		&--active
+			transform: scale(1)
+			height: auto
+		&_name
+			grid-area: name
+		&_txt
+			grid-area: txt
+			padding: 0.625rem 0 1.75rem
+		&_contacts
+			grid-area: contacts
+		&_link
+			color: inherit
+			grid-area: link
+			align-self: end
+			margin-bottom: 0.6125rem
+			&:hover
+				color: inherit
+				text-decoration: none
+		&_gallery
+			grid-area: gallery 
+			display: grid
+			grid-template-columns: repeat(4, 1fr)
+			grid-template-areas: "big-img big-img small-img1 small-img2" "big-img big-img small-img3 small-img4"
+			grid-gap: 0.5rem
+			margin-top: 2.0625rem
+		&_img_wrap
+			position: relative
+
+			&::before
+				content: ""
+				display: block
+				padding-top: 83% 
+			&::after
+				content: ""
+				display: block
+				width: 100%
+				height: 100%
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				opacity: 0
+				background-color: rgba(43, 38, 47, 0.8)
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='48.5424' height='48.5424'%3e%3ccircle cx='24.2712' cy='24.2712' r='24.2712' opacity='.92' fill='%23efbf2d'/%3e%3cpath d='M29.7319 20.1544h-1.344v-1.3439a.667.667 0 0 0-1.3339 0v1.344H25.71a.667.667 0 0 0 0 1.3338h1.344v1.344a.667.667 0 0 0 1.334 0v-1.344h1.3439a.667.667 0 0 0 0-1.3339zm2.5948-3.9388c-1.2302-1.2302-2.866-1.9078-4.6058-1.9078-1.7398 0-3.3755.6776-4.6057 1.9078-1.2303 1.2303-1.9078 2.866-1.9078 4.6058 0 1.7398.6776 3.3755 1.9078 4.6058 1.2302 1.2303 2.866 1.9079 4.6057 1.9079 1.7399 0 3.3756-.6776 4.6058-1.9079 1.2303-1.2302 1.9079-2.866 1.9079-4.6058-.0001-1.7397-.6776-3.3754-1.9079-4.6058zm-.9433 8.2684c-.9783.9783-2.279 1.5171-3.6625 1.5171-1.3835 0-2.6842-.5388-3.6625-1.5171-.9784-.9784-1.5171-2.279-1.5171-3.6625 0-1.3836.5387-2.6842 1.5171-3.6626.9783-.9783 2.279-1.5171 3.6625-1.5171 1.3835 0 2.6842.5388 3.6625 1.5171.9784.9784 1.5172 2.279 1.5172 3.6626 0 1.3835-.5388 2.6842-1.5172 3.6625zm2.9873-10.3123c-3.6668-3.6666-9.6328-3.6665-13.2995 0-3.508 3.5082-3.6592 9.1208-.4547 12.811l-1.1202 1.1202-1.1414-1.1414a.6671.6671 0 0 0-.9433 0l-5.3475 5.3474c-1.1493 1.1495-1.1493 3.0198 0 4.1693.5748.5748 1.3298.8621 2.0847.8621.7549 0 1.5099-.2874 2.0846-.862l5.3475-5.3475a.667.667 0 0 0 0-.9433l-1.1414-1.1414 1.1202-1.1202c1.7617 1.5299 3.9613 2.2953 6.1613 2.2953 2.4081 0 4.8164-.9167 6.6497-2.75 3.6666-3.6667 3.6666-9.6328 0-13.2995zM15.2901 35.535c-.6293.6293-1.6533.6295-2.2828 0-.6294-.6293-.6294-1.6535 0-2.2828l2.984-2.984 2.2829 2.2828zm3.9274-3.9273l-2.2828-2.2828.9485-.9485 2.2828 2.2827zm14.21-5.0798c-3.1466 3.1465-8.2665 3.1466-11.413 0-3.1466-3.1465-3.1466-8.2664 0-11.413 1.5734-1.5735 3.6395-2.36 5.7065-2.36 2.0663 0 4.1334.787 5.7065 2.36 3.1465 3.1466 3.1465 8.2665 0 11.413z'/%3e%3c/svg%3e")
+				background-position: center
+				background-size: 3rem
+				background-repeat: no-repeat
+				transition: opacity 0.2s ease 
+			&:hover::after
+				opacity: 1
+			&:first-child
+				grid-area: big-img
+		&_img
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			object-fit: cover
+			height: 100%
+			width: 100%
+
+		p:last-child
+			margin-bottom: 0
+
+.shares
+	padding: 68px 0 113px
+.share
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-gap: 32px
+	margin-top: 44px
+	&__item
+		display: flex
+		flex-direction: column
+	&__img_wrap
+		position: relative
+		margin-bottom: 16px
+		&::before
+			content: ""
+			display: block
+			padding-top: 66.4%
+	&__img
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		object-fit: cover
+		height: 100%
+		width: 100%
+	&__name
+		text-decoration: underline
+		text-decoration-color: #b2b2b2
+	&__date
+		margin-top: 7px
+		font-size: 0.875rem
+.fos
+	display: grid
+	grid-template-columns: 3fr 4fr
+	&__window
+		grid-column-start: 2
+		background-color: #ffffff
+		border-radius: 5px
+		text-align: center
+		margin: 60px 0
+		padding: 30px 45px 40px
+	&__txt
+		font-size: 1.125rem
+		line-height: 1.3
+	&__form
+		display: grid
+		//grid-template-columns: repeat(5, 1fr) 0.5fr 0.5fr repeat(5, 1fr)
+		//grid-template-areas: "name name name name name name phone phone phone phone phone phone" "theme theme theme theme theme theme theme theme theme submit submit submit"
+		grid-template-columns: 9.375rem 1fr 1fr 9.375rem
+		grid-template-areas: "name name phone phone" "theme theme theme submit"
+		
+		grid-gap: 10px
+		margin: 19px 0 28px
+	&__input
+		border-radius: 1.4375rem
+		border: 2px solid #000
+		line-height: 2.875rem
+		padding: 0px 20px
+		&--name
+			grid-area: name
+		&--phone
+			grid-area: phone
+		&--theme
+			grid-area: theme
+		&--submit
+			grid-area: submit
+	&__soglasie
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+	&__soglasen_txt
+		text-align: left
+		font-size: 0.8125rem
+		line-height: 1.3
+
+.gallery
+	padding: 4.25rem 0 3.3rem
+	&__wrap
+		display: flex
+		margin: 35px -15px
+		justify-content: center
+	&__item
+		padding: 0 15px
+		flex: 1 1
+		max-width: 230px
+
+.contacts
+	display: flex
+	justify-content: stretch
+	flex-wrap: wrap
+	margin-top: 39px
+	&__item
+		display: grid
+		grid-template-columns: 2.375rem 1fr
+		grid-template-rows: min-content
+		grid-column-gap: 0.75rem
+		grid-row-gap: 0.2rem
+		align-items: start
+		min-width: 225px
+		margin-right: 40px
+	&__icon
+		grid-row: 1/3
+	&__name
+		font-weight: 900
+		text-transform: uppercase
+		line-height: 1
+	&__link
+		color: #000000
+		line-height: 1.3
+	&__social
+		margin-left: -0.25rem
+	&__social_name
+		line-height: 1
+	&__social_link
+		display: inline-block
+		width: 1.4375rem
+		line-height: 2
+		margin-right: 0.5rem
+
+		
+
+.fst_scr
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+.gray
+	background-color: #ededed
+.btn_submit
+	border-radius: 1.5625rem
+	line-height: 3.125rem
+	border: none
+	background-color: #fcd22e
+	font-size: 0.875rem
+	font-weight: bold
+	text-transform: uppercase
+	text-align: center
+	box-shadow: 0px 4px 10px 0px rgba(241, 209, 67, 0.5)
+	&:hover
+		background-color: #fcd22eaa
+
+input[type=checkbox]
+	position: absolute
+	display: block
+	width: 1px
+	height: 1px
+	opacity: 0
+	left: -9999px
+	&~label.checkbox
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		border-style: solid
+		border-width: 1px
+		border-color: #ccc
+		border-radius: 5px
+		background-color: #efefef
+		width: 1.25rem
+		height: 1.25rem
+		margin-right: 12px
+		&::before
+			content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAa0lEQVQYlYXOsQ2CUACE4e/FkBhKZ7ClI6E0sSWhJU7ACkzAAkzAAHSWlk5hZ2FwDCuSVzzhyrv/chfsq0G7B13xRQn5H6jCgstq3DEgRFCBD+q4ecITEzKc8cYtNXPEjAde6LaOHzCiT4U/JzIMnuqzUz0AAAAASUVORK5CYII=')
+			//display: block
+			//position: relative
+			//bottom: 8%
+			//width: 0.65rem
+			//height: 0.4rem
+			//border-style: solid
+			//border-top: none
+			//border-right: none
+			//border-width: 2px
+			//border-color: #000000
+			//transform: rotate(-55deg)
+			opacity: 0
+			//transition: all .2s ease
+	&:checked~label.checkbox
+		background-color: #fcd22e
+		border-color: #fcd22e
+		&::before
+			opacity: 1
