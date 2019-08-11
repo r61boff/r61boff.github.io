@@ -127,6 +127,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	      }
 	    }());
-	    var mall_slider = multiItemSlider('.slider.mall__tab_gallery'), gallery_slider =multiItemSlider('.gallery .slider'); 
+	    var gallery_slider = multiItemSlider('.gallery .slider');
+	    for (let i = 0, mall = document.querySelectorAll('.mall__tab'), len = mall.length; i < len; i++) {
+	    	if (document.querySelector('#' + mall[i].id + ' .slider')) {
+	    		let mall_slider = multiItemSlider('#' + mall[i].id + ' .slider')
+	    	}
+	    } 
 
 });
